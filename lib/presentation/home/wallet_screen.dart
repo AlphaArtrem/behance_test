@@ -131,8 +131,8 @@ class _WalletScreenState extends State<WalletScreen> {
 
   Widget _walletOption() {
     Widget balanceSwitch = Transform.scale(
-      scale: 0.65,
-      origin: const Offset(-25, -25),
+      scale: Sizing.mediaQueryData.devicePixelRatio * 0.25,
+      alignment: Alignment.topLeft,
       child: CupertinoSwitch(
         value: true,
         onChanged: (_) {},
@@ -249,7 +249,7 @@ class _WalletScreenState extends State<WalletScreen> {
 
   Widget _tokens() {
     return SizedBox(
-      height: Sizing.screenHeight * 0.275,
+      height: Sizing.screenHeight * 0.3,
       child: ListView.builder(
         itemBuilder: (context, index) {
           Token token = Token.dummyData[index];

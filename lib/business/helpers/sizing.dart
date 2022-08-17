@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 class Sizing {
   Sizing._();
 
-  static late MediaQueryData _mediaQueryData;
+  static late MediaQueryData mediaQueryData;
   static late double screenWidth;
   static late double screenHeight;
   static late double defaultSize;
   static late Orientation orientation;
 
   Sizing.init(BuildContext context) {
-    _mediaQueryData = MediaQuery.of(context);
-    screenWidth = _mediaQueryData.size.width;
-    screenHeight = _mediaQueryData.size.height;
-    orientation = _mediaQueryData.orientation;
+    mediaQueryData = MediaQuery.of(context);
+    screenWidth = mediaQueryData.size.width;
+    screenHeight = mediaQueryData.size.height;
+    orientation = mediaQueryData.orientation;
   }
 
   static double getProportionateScreenHeight(double inputHeight) {
